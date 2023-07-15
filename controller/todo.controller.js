@@ -9,7 +9,20 @@ exports.create = async (req, res, next) => {
 
     res.json({
       status: true,
-      sucess: "Todo Created Successfully",
+      success: "Todo Created Successfully",
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.getList = async (req, res, next) => {
+  try {
+    const list = await TodoService.getList();
+
+    res.json({
+      status: true,
+      success: list,
     });
   } catch (error) {
     next(error);

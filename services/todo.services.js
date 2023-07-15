@@ -9,6 +9,13 @@ class TodoService {
       throw error;
     }
   }
+  static async getList() {
+    try {
+      return await TodoModel.find({});
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 module.exports = TodoService;

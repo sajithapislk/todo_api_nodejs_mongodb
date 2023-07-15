@@ -9,7 +9,7 @@ exports.register = async (req, res, next) => {
 
     res.json({
       status: true,
-      sucess: "User Registered Successfully",
+      success: "User Registered Successfully",
     });
   } catch (error) {
     next(error);
