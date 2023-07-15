@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // const uri = "mongodb+srv://sajiyabro:kn4Hu1uaDkN54oNm@todoapi.yakl5cf.mongodb.net/?retryWrites=true&w=majority";
-const uri = "mongodb://127.0.0.1:27017";
+const uri = "mongodb://127.0.0.1:27017/Todo";
 
 // const connection = mongoose.createConnection(uri, { useNewUrlParser: true, useUnifiedTopology: true }).on('open',()=>{
 //     console.log("MongoDb Connected");

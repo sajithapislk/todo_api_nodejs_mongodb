@@ -12,7 +12,7 @@ exports.register = async (req, res, next) => {
       sucess: "User Registered Successfully",
     });
   } catch (error) {
-    throw error;
+    next(error);
   }
 };
 
@@ -46,6 +46,6 @@ exports.login = async (req, res, next) => {
     });
 
   } catch (error) {
-    throw error;
+    next(error);
   }
 };
