@@ -18,18 +18,7 @@ class UserService {
     }
   }
   static async generateToken(tokenData,secretKey,jwt_expire){
-    return jwt.sign(tokenData,secretKey,{expiresIn:jwt_expire})
-  }
-  static async authenticateToken(req,res,next){
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' '[1]);
-    if(token == null) return res.sendStatus(401);
-
-    jwt.verify(token,secretKey,(err, user)=>{
-      if(err) return res.sendStatus(403);
-      req.user = user;
-      next();
-    });
+    return jwt.sign(tokenData,secretKey,{expiresIn:jwt_expire});
   }
 }
 
